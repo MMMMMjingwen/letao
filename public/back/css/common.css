@@ -1,7 +1,12 @@
 @charset "UTF-8";
+<<<<<<< HEAD
 
 body{
   background-color:  #222d32;
+=======
+body{
+  background-color: #222d32 ;
+>>>>>>> login
 }
 .box{
   margin-top: 150px;
