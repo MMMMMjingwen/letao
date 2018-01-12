@@ -12,7 +12,7 @@ $(function(){
     setTimeout(function(){
       NProgress.done();
       console.log("结束");
-    },2000)
+    },500)
 
   });
 
@@ -21,6 +21,34 @@ $(function(){
      $(this).next().slideToggle();
   })
 
-  //
+  //侧边栏显示和隐藏
+   $('.lt_menu').on('click',function(){
+     $('.lt_silde').toggleClass('small')
+     $('.lt_main').toggleClass('small')
+
+   })
+
+
+    //退出功能
+   $('.lt_loginout').on('click',function(){
+     $('.modal').modal('show')
+
+   })
+
+  $('.btn-loginout').on('click',function(){
+
+    $.ajax({
+      type:"get",
+      url:'/employee/employeeLogout',
+      success:function(info){
+        console.log(info)
+        if(info.success){
+          location.href = "login.html";
+        }
+      }
+    })
+
+  })
+
 
 });

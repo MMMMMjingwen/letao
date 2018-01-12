@@ -34,7 +34,18 @@ ol,ul{
   margin-top: 150px;
 }
 
+.lt_silde.small{
+  left: -180px;
+  transition: all 1s;
+}
+.lt_main.small{
+  margin-left: 0px;
+  transition: all 1s;
+}
+
 .lt_silde{
+  left: 0px;
+  transition: all 1s;
   height: 100%;
   width: 180px;
   background-color: #222d32;
@@ -110,12 +121,14 @@ ol,ul{
 .lt_main{
   height: 100%;
   margin-left: 180px;
-  background-color: purple;
+  background-color: pink;
+  transition: all 1s;
 }
 .lt_main .lt_header{
   background-color: #3c8dbc;
   height: 50px;
   width: 100%;
+  transition: all 1s;
 }
 .lt_main .lt_header span{
   font-size: 20px;
@@ -128,4 +141,11 @@ ol,ul{
 .lt_main .lt_content a{
   color: #000;
 }
-
+.modal .modal-body p{
+  color:red;
+}
+.square,
+.round{
+  height: 400px;
+  width: 45%;
+}

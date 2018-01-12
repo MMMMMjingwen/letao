@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="lt_silde">
-  <div class="brand"><a href="#">黑马17期</a></div>
+  <div class="brand"><a href="index.html">黑马17期</a></div>
   <div class="info">
     <img src="./images/seve.jpg" alt="">
     <p></a>seven.harper</p>
@@ -18,8 +18,7 @@
   <div class="cart">
     <ul>
       <li>
-
-        <a href="#">   <span class='glyphicon glyphicon-user'></span>用户管理</a>
+        <a href="#"> <span class='glyphicon glyphicon-user'></span>用户管理</a>
       </li>
       <li class='two'>
 
@@ -36,28 +35,49 @@
   </div>
 </div>
 
-<div class="lt_main">
+<div class="lt_main ">
   <div class="lt_header">
-    <span class='glyphicon glyphicon-align-justify fl'></span>
-    <span class='glyphicon glyphicon glyphicon-log-out fr'></span>
+    <span class='glyphicon glyphicon-align-justify fl lt_menu'></span>
+    <span class='glyphicon glyphicon glyphicon-log-out fr lt_loginout '></span>
   </div>
   <div class="lt_content">
-    <div class="container">
+    <div class="container-fluid">
       <ol class="breadcrumb">
         <li><a href="#">管理系统</a></li>
         <li class="active">用户管理</li>
       </ol>
+      <!--饼图和数据条-->
+      <div class="square fl">11</div>
+      <div class="round fr">22</div>
     </div>
   </div>
 </div>
+<!--模态框-->
+<div class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
 
-
+        <p><span class='glyphicon glyphicon-info-sign '></span>您确定要退出后台管理系统吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary btn-loginout">退出</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script src='./lib/jquery/jquery.js'></script>
 <script src='./lib/bootstrap/js/bootstrap.min.js'></script>
 <script src='./lib/bootstrap-validator/js/bootstrapValidator.min.js'></script>
 <script src='./lib/nprogress/nprogress.js'></script>
 <script src='./js/login.js'></script>
 <script src='js/common.js'></script>
+<script src='lib/echarts/echarts.min.js'></script>
 <script src='js/index.js'></script>
 </body>
 </html>
