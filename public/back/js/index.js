@@ -1,6 +1,8 @@
 /**
  * Created by 马靖文 on 2018/1/11.
  */
+
+//echarts
 ;(function(){
   var square=echarts.init(document.querySelector('.square'));
   var round=echarts.init(document.querySelector('.round'));

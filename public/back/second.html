@@ -20,15 +20,15 @@
       <li>
         <a href="user.html"> <span class='glyphicon glyphicon-user'></span>用户管理</a>
       </li>
-      <li>
-        <a href="javascript:;"><span class='glyphicon glyphicon-list'></span>分类管理</a>
-        <div class='child' style='display:none'>
-          <a href='frist.html '>一级分类</a>
-          <a href='second.html '>二级分类</a>
+      <li class='two'>
+        <a href="javascript:;"> <span class='glyphicon glyphicon-list'></span>分类管理</a>
+        <div class='child'>
+          <a href='frist.html' class='frist'>一级分类</a>
+          <a href='second.html' class='second now'>二级分类</a>
         </div>
       </li>
       <li>
-        <a href="product.html"><span class='glyphicon glyphicon-tags'></span>商品管理</a>
+        <a  href="product.html"><span class='glyphicon glyphicon-tags'></span>商品管理</a>
       </li>
     </ul>
   </div>
@@ -45,9 +45,6 @@
         <li><a href="#">管理系统</a></li>
         <li class="active">用户管理</li>
       </ol>
-      <!--饼图和数据条-->
-      <div class="square fl"></div>
-      <div class="round fr"></div>
     </div>
   </div>
 </div>
@@ -56,7 +53,7 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
@@ -76,7 +73,6 @@
 <script src='./lib/nprogress/nprogress.js'></script>
 <script src='./js/login.js'></script>
 <script src='js/common.js'></script>
-<script src='lib/echarts/echarts.min.js'></script>
-<script src='js/index.js'></script>
+
 </body>
 </html>

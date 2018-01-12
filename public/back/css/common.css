@@ -101,18 +101,17 @@ ol,ul{
      padding-right: 5px;
  }
 .lt_silde .cart .child a{
-  display: block;
-  margin-left: 30px;
-  font-size: 14px;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  padding-left: 50px;
 }
 .lt_silde .cart a{
   display: block;
   height: 40px;
   line-height: 40px;
   padding-left: 30px;
+  /*border: 3px solid transparent;*/
 }
-.lt_silde .now{
+.lt_silde .cart .now{
   /*border-left-color: #069;*/
   background-color: #1d1f21;
   color: #fff;
