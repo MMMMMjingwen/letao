@@ -128,7 +128,7 @@ $(function () {
   //表单校验
   var $form = $("form");
   $form.bootstrapValidator({
-    excluded: [],
+    //excluded: [],
     feedbackIcons: {
       //校验成功的图标
       valid: 'glyphicon glyphicon-ok',
@@ -198,13 +198,13 @@ $(function () {
           }
         }
       },
-      brandLogo:{
-        validators:{
-          notEmpty:{
-            message:"请上传3张图片"
-          }
-        }
-      }
+      //brandLogo:{
+      //  validators:{
+      //    notEmpty:{
+      //      message:"请上传3张图片"
+      //    }
+      //  }
+      //}
 
     }
   });

@@ -18,7 +18,7 @@ $(function () {
         pageSize:pageSize
       },
       success:function (info){
-        console.log(info);
+        //console.log(info);
 
         $("tbody").html( template("tpl", info) );
 
@@ -49,6 +49,7 @@ $(function () {
 
   //表单校验功能
   var $form = $("#form");
+  console.log($form);
   $form.bootstrapValidator({
     feedbackIcons:{
       valid: 'glyphicon glyphicon-ok',
@@ -57,13 +58,14 @@ $(function () {
     },
 
     fields:{
-      categoryName:{
 
+      categoryName:{
         validators:{
           notEmpty:{
             message:"请输入一级分类的名称"
-          }
-        }
+          },
+
+        },
 
       }
     }

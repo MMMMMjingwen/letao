@@ -5,7 +5,7 @@ $(function(){
 
 
   $(document).ajaxStart(function () {
-    console.log("开始");
+    //console.log("开始");
     NProgress.start();
   });
 
@@ -13,7 +13,7 @@ $(function(){
 
     setTimeout(function(){
       NProgress.done();
-      console.log("结束");
+      //console.log("结束");
     },500)
 
   });
