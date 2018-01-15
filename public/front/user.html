@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/categroy.css">
+  <link rel="stylesheet" href="./css/user.css">
 </head>
 <body>
 <div class="container">
@@ -21,56 +21,42 @@
   </div>
 
   <div class="lt-main">
-    <div class="cate-l">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll fristName ">
-            <!--<li><a href="#">运动馆</a></li>-->
-           
+    <ul class="mui-table-view">
+      <li class="mui-table-view-cell user">
+        <img height=50  src="./images/user.jpg" alt="">
+        <div  class='info'>
+          <p>拉拉</p>
+          <p>绑定手几号1234567890</p>
         </div>
-      </div>
-    </div>
-    <div class="cate-r">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll brand">
-            <!--<li><img src="./images/brand6.png" alt=""></li>-->
-
-        </div>
-      </div>
-    </div>
-    
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">账号与安全</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">我的购物车</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">收货地址管理</a>
+      </li>
+    </ul>
+    <a href="login.html" class='mui-btn mui-btn-block'>退出</a>
   </div>
 
   <div class="lt-footer">
     <ul class='mui-clearfix'>
       <li><a href="index.html"><span class='fa fa-home '></span><p>首页</p></a></li>
-      <li><a href="categroy.html"><span class='fa fa-bars now'></span><p class='now'>分类</p></a></li>
+      <li><a href="categroy.html"><span class='fa fa-bars '></span><p >分类</p></a></li>
       <li><a href="#"><span class='fa fa-shopping-cart'></span><p>购物车</p></a></li>
-      <li><a href="#"><span class='fa fa-user'></span><p>会员中心</p></a></li>
+      <li><a href="user.html"><span class='fa fa-user now'></span><p class='now'>会员中心</p></a></li>
     </ul>
   </div>
 </div>
 </body>
 </html>
 
-<!--一类模板引擎-->
-<script type='text/template' id='oneTpl'>
-  {{each rows v i}}
-  <li class='list' data-id={{v.id}}><a href="#">{{v.categoryName}}</a></li>
-  {{/each}}
-</script>
-<!--二类模板引擎-->
-<script type='text/template' id='twoTpl'>
-  {{if rows.length == 0}}
-  <p class='category_tips'>没有添加商品信息</p>
-  {{/if}}
 
-  {{each rows v i}}
-  <li><img src="{{v.brandLogo}}" alt=""><p>{{v.brandName}}</p></li>
-  {{/each}}
-</script>
 <!--<script src='lib/zepto/zepto.min.js'></script>-->
 <script src='lib/zepto/zepto.min.js'></script>
 <script src='lib/mui/js/mui.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
 <script src='js/common.js'></script>
-<script src='js/categroy.js'></script>

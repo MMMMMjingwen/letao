@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/categroy.css">
 </head>
 <body>
 <div class="container">
@@ -21,56 +20,38 @@
   </div>
 
   <div class="lt-main">
-    <div class="cate-l">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll fristName ">
-            <!--<li><a href="#">运动馆</a></li>-->
-           
-        </div>
+    <form class="mui-input-group">
+      <div class="mui-input-row">
+        <label>用户名</label>
+        <input type="text" class="mui-input-clear" placeholder="请输入用户名">
       </div>
-    </div>
-    <div class="cate-r">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll brand">
-            <!--<li><img src="./images/brand6.png" alt=""></li>-->
-
-        </div>
+      <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password" placeholder="请输入密码">
       </div>
-    </div>
-    
+      <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary">确认</button>
+        <button type="reset" class="mui-btn mui-btn-danger">重置</button>
+      </div>
+    </form>
+    <a href="register.html">立即注册</a>
   </div>
 
   <div class="lt-footer">
     <ul class='mui-clearfix'>
       <li><a href="index.html"><span class='fa fa-home '></span><p>首页</p></a></li>
-      <li><a href="categroy.html"><span class='fa fa-bars now'></span><p class='now'>分类</p></a></li>
+      <li><a href="categroy.html"><span class='fa fa-bars '></span><p >分类</p></a></li>
       <li><a href="#"><span class='fa fa-shopping-cart'></span><p>购物车</p></a></li>
-      <li><a href="#"><span class='fa fa-user'></span><p>会员中心</p></a></li>
+      <li><a href="user.html"><span class='fa fa-user now'></span><p class='now'>会员中心</p></a></li>
     </ul>
   </div>
 </div>
 </body>
 </html>
 
-<!--一类模板引擎-->
-<script type='text/template' id='oneTpl'>
-  {{each rows v i}}
-  <li class='list' data-id={{v.id}}><a href="#">{{v.categoryName}}</a></li>
-  {{/each}}
-</script>
-<!--二类模板引擎-->
-<script type='text/template' id='twoTpl'>
-  {{if rows.length == 0}}
-  <p class='category_tips'>没有添加商品信息</p>
-  {{/if}}
 
-  {{each rows v i}}
-  <li><img src="{{v.brandLogo}}" alt=""><p>{{v.brandName}}</p></li>
-  {{/each}}
-</script>
 <!--<script src='lib/zepto/zepto.min.js'></script>-->
 <script src='lib/zepto/zepto.min.js'></script>
 <script src='lib/mui/js/mui.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
 <script src='js/common.js'></script>
-<script src='js/categroy.js'></script>

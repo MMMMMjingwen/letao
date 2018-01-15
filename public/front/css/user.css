@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+.user .info{
+ float: left;
+  left: 50px;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+.user p:nth-child(1){
+  color: #000;
+  font-size: 18px;
+}
+.user img{
+  float: left;
+}
+.mui-btn{
+  margin-top: 3px;
+}

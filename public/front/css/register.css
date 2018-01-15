@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.lt-header .title {
+  font-weight: 200;
+}
+.myform{
+  padding: 10px;
+}
+.checkNum input{
+  width: 50%;
+}
+.checkNum .mui-btn-block{
+  width: 45%;
+}
