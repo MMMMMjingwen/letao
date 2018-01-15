@@ -1,7 +1,8 @@
 /**
  * Created by 马靖文 on 2018/1/11.
  */
-;(function () {
+$(function(){
+
   var $form = $('form');
   //初始化表单
   $form.bootstrapValidator({
@@ -74,7 +75,7 @@
   })
 
 
-})();
+});
 
 
 

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/common.css">
 </head>
 <html>
+<body>
 <div class="lt_silde">
   <div class="brand"><a href="index.html">黑马17期</a></div>
   <div class="info">
@@ -35,64 +36,66 @@
   </div>
 </div>
 
-<body class="lt_main ">
-<div class="lt_header">
-  <span class='glyphicon glyphicon-align-justify fl lt_menu'></span>
-  <span class='glyphicon glyphicon glyphicon-log-out fr lt_loginout '></span>
-</div>
-<div class="lt_content">
-  <div class="container-fluid">
-    <ol class="breadcrumb">
-      <li><a href="#">管理系统</a></li>
-      <li class="active">商品管理</li>
-    </ol>
+<div class="lt_main">
+  <div class="lt_header">
+    <span class='glyphicon glyphicon-align-justify fl lt_menu'></span>
+    <span class='glyphicon glyphicon glyphicon-log-out fr lt_loginout '></span>
   </div>
-  <div class="container-fluid">
-    <button class='pb-20'>添加商品</button>
-    <table class="table table-bordered table-hover text-center ">
-      <thead>
-      <tr>
-        <td width="10%">序号</td>
-        <td width="30%">商品名称</td>
-        <td width="20%">商品描述</td>
-        <td width="10%">商品库存</td>
-        <td width="10%">商品尺寸</td>
-        <td width="10%">商品状态</td>
-        <td width="10%">操作</td>
-      </tr>
-      </thead>
-      <tbody>
-      <!--<tr>-->
-      <!--<td>1</td>-->
-      <!--<td>yezzy</td>-->
-      <!--<td>侃爷合作款</td>-->
-      <!--<td>12</td>-->
-      <!--<td>25-45</td>-->
-      <!--<td>已上架</td>-->
-      <!--<td>-->
-      <!--<button class='btn btn-default btn-sm'>上架</button>-->
-      <!--<button class='btn btn-danger btn-sm'>下架</button>-->
-      <!--</td>-->
-      <!--</tr>-->
-      </tbody>
-    </table>
-    
+  <div class="lt_content">
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="#">管理系统</a></li>
+        <li class="active">商品管理</li>
+      </ol>
+    </div>
+    <div class="container-fluid">
+      <button class='pb-20'>添加商品</button>
+      <table class="table table-bordered table-hover text-center ">
+        <thead>
+        <tr>
+          <td width="10%">序号</td>
+          <td width="30%">商品名称</td>
+          <td width="20%">商品描述</td>
+          <td width="10%">商品库存</td>
+          <td width="10%">商品尺寸</td>
+          <td width="10%">商品状态</td>
+          <td width="10%">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr>-->
+        <!--<td>1</td>-->
+        <!--<td>yezzy</td>-->
+        <!--<td>侃爷合作款</td>-->
+        <!--<td>12</td>-->
+        <!--<td>25-45</td>-->
+        <!--<td>已上架</td>-->
+        <!--<td>-->
+        <!--<button class='btn btn-default btn-sm'>上架</button>-->
+        <!--<button class='btn btn-danger btn-sm'>下架</button>-->
+        <!--</td>-->
+        <!--</tr>-->
+        </tbody>
+      </table>
+
+      <!--分页渲染-->
+      <div class="text-right">
+        <ul id="paginator">
+
+        </ul>
+      </div>
+    </div>
     <!--分页渲染-->
     <div class="text-right">
-      <ul id="paginator">
-      
+      <ul id="pagintor">
+
       </ul>
     </div>
   </div>
-  <!--分页渲染-->
-  <div class="text-right">
-    <ul id="pagintor">
-    
-    </ul>
-  </div>
 </div>
-<!--模态框-->
-<div class="modal fade">
+
+<!--common模态框-->
+<div class="modal fade" id='commodal'>
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -100,8 +103,8 @@
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
-        
-        <p><span class='glyphicon glyphicon-info-sign '></span>您确定要退出后台管理系统吗？</p>
+
+        <p><span class='glyphicon glyphicon-info-sign'></span>您确定要退出后台管理系统吗？</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -110,9 +113,8 @@
     </div>
   </div>
 </div>
-
 <!--模态框二-->
-<div class="modal fade " tabindex="-1" id='proModal' >
+<div class="modal fade " tabindex="-1" id='proModal'>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -123,49 +125,54 @@
       
       <div class="modal-body">
         <form id='form'>
-        <div class="form-group">
-          <!--下拉菜单-->
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-              <span class="second-txt">请选择二级分类</span>
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel">
-              <!--<li>阿迪达斯</li>-->
-            </ul>
+          <div class="form-group">
+            <!--下拉菜单-->
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                <span class="second-txt">请选择二级分类</span>
+                <span class="caret"></span>
+              </button>
+              <input type="hidden" name='brandId' >
+              <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <!--<li>阿迪达斯</li>-->
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name='proName' placeholder='请输入商品的名称'>
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品的描述"></textarea>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name='num' placeholder='请输入商品的库存'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name='size' placeholder='请输入商品的尺码'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name='oldPrice' placeholder='请输入商品的原价'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name='price' placeholder='请输入商品的价格'>
-        </div>
-        
-        <!--上传图片-->
-        <div class="form-group">
-          <label for='fileupload' class='btn btn-default'>上传图片</label>
-          <input type="file" id='fileupload'  name='pic1'>
-        </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name='proName' placeholder='请输入商品的名称'>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品的描述"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name='num' placeholder='请输入商品的库存'>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name='size' placeholder='请输入商品的尺码'>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name='oldPrice' placeholder='请输入商品的原价'>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name='price' placeholder='请输入商品的价格'>
+          </div>
 
-        <!--图片位置-->
-         <div class="form-group">
-           <!--<img width='100' height='100' src="./images/none.png" alt="">-->
-           <!--<img width='100' height='100' src="./images/none.png" alt="">-->
-           <!--<img width='100' height='100' src="./images/none.png" alt="">-->
-         </div>
+          <!--上传图片-->
+          <div class="form-group input">
+            <label for='fileupload' class='btn btn-default'>上传图片</label>
+            <input type="file" id='fileupload' name='pic1' multiple data-url='/product/addProductPic'>
+          </div>
+
+          <!--图片位置-->
+          <div class="form-group">
+            <div class='img-box'>
+              <!--<img height='100' src="./images/none.png" alt="">-->
+              <!--<img height='100' src="./images/none.png" alt="">-->
+              <!--<img height='100' src="./images/none.png" alt="">-->
+              <input type="hidden" name='statu' value='1'>
+              <input type="hidden" name='brandLogo'>
+            </div>
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -200,6 +207,7 @@
   <li class='seco' data-id={{v.id}}><a href="#">{{v.brandName}}</a></li>
   {{/each}}
 </script>
+<!---->
 <script src='./lib/jquery/jquery.js'></script>
 <script src='./lib/bootstrap/js/bootstrap.js'></script>
 <script src='./lib/jquery-fileupload/jquery.ui.widget.js'></script>

@@ -36,7 +36,6 @@
 
 //表单验证
   var $form = $("#form");
-  //console.log($form);
   $form.bootstrapValidator({
     feedbackIcons:{
       valid: 'glyphicon glyphicon-ok',
@@ -45,7 +44,6 @@
     },
 
     fields:{
-
       categoryName:{
         validators:{
           notEmpty:{
@@ -61,35 +59,32 @@
 
 //点击添加分类 弹出模态框
   $('.pb-20').on('click',function(){
-    $('.modal').modal('show');
+    $('#fristmodal').modal('show');
+  })
 
 
-    //  var categoryName=$form.serialize()
+  $("#form").on('success.form.bv',function(e){
 
-    $('.btn-add').off().on('click',function() {
-      //var categoryName = $("[name='categoryName']").val();?????
-      $.ajax({
-        type: 'post',
-        url: '/category/addTopCategory',
-        data: $form.serialize(),
-        success: function (info) {
-          console.log(info)
-          if (info.success) {
-            $('.modal').modal('hide');
-            render();
-          }
-          //$form.data('bootstrapValidator').resetForm();
-          $form.data("bootstrapValidator").resetForm();
-          $form[0].reset();
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: '/category/addTopCategory',
+      data: $form.serialize(),
+      success: function (info) {
+        console.log(info)
+        if (info.success) {
+          $('#fristmodal').modal('hide');
+          render();
         }
-
-      })
+        //$form.data('bootstrapValidator').resetForm();
+        $form.data("bootstrapValidator").resetForm();
+        $form[0].reset();
+      }
 
     })
 
-
-
   })
+
 
 
 })();

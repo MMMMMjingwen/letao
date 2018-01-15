@@ -198,13 +198,13 @@ $(function () {
           }
         }
       },
-      //brandLogo:{
-      //  validators:{
-      //    notEmpty:{
-      //      message:"请上传3张图片"
-      //    }
-      //  }
-      //}
+      brandLogo:{
+        validators:{
+          notEmpty:{
+            message:"请上传3张图片"
+          }
+        }
+      }
 
     }
   });

@@ -74,8 +74,9 @@
     </div>
   </div>
 </div>
-<!--模态框-->
-<div class="modal fade">
+
+<!--common模态框-->
+<div class="modal fade" id='commodal'>
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -94,60 +95,57 @@
   </div>
 </div>
 
-<!--模态框二-->
+<!--模态框分类二-->
 <div class="modal fade" id='secondmodal'>
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
+
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">添加分类</h4>
       </div>
-      <form id="form">
-         <div class="modal-body">
 
-          <!--<div class="form-group">-->
-          <!--<div class="dropdown">-->
-          <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">-->
-          <!--<span class="dropdown-text">请选择一级分类</span>-->
-          <!--<span class="caret"></span>-->
-          <!--</button>-->
-          <!--<input type="hidden" name="categoryId">-->
-          <!--<ul class="dropdown-menu">-->
-          <!--&lt;!&ndash;再挖个坑&ndash;&gt;-->
-          <!--</ul>-->
-          <!--</div>-->
-          <!--</div>-->
+      <div class="modal-body">
+        <form id="form">
+
           <div class="form-group">
-            <input type="text" class="form-control" name="brandName" placeholder="请输入二级分类的名称">
-          </div>
-           </div>
-          <!--<div class="form-group">-->
-          <!--<div class="fileupload_box">-->
-          <!--<button class="btn btn-default">上传图片</button>-->
+            <!--下拉菜单-->
+            <div class="dropdown">
+              <button id="dLabel" type="button" data-toggle="dropdown" class='btn btn-default'>
+                <span class='cart-txt'>请选择一级分类</span>
+                <span class="caret"></span>
+                <input type="hidden" name='categoryId'>
+              </button>
 
-          <!--&lt;!&ndash;-->
-          <!--id:方便获取-->
-          <!--name:pic1 指定图片的name属性，后端要通过这个name属性来获取到这张图片-->
-          <!--data-url:指定图片上传的接口地址-->
-          <!--&ndash;&gt;-->
-          <!--<input type="file" class="btn btn-default" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic">-->
-          <!--</div>-->
-          <!--</div>-->
-          <!--<div class="form-group img_box">-->
-          <!--<img src="images/none.png" width="100" height="100" alt="">-->
-          <!--<input type="hidden" name="brandLogo">-->
-          <!--</div>-->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="submit" form="form" class="btn btn-primary">添加</button>
+              <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <!--li-->
+              </ul>
+            </div>
           </div>
-      </form>
+          <div class="form-group">
+            <input type="text" class="form-control  " name="brandName" placeholder="请输入二级分类的名称">
+          </div>
+          <div class="form-group input">
+            <label for='fileupload' class='btn btn-default'>上传图片</label>
+            <input type="file" id='fileupload' name='pic1' data-url='/category/addSecondCategoryPic'>
+          </div>
 
+        <div class="form-group">
+          <img class='sec-img'  height=100  src="./images/none.png" alt="" >
+          <input type="hidden" name='brandLogo'>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-del" data-dismiss="modal">取消</button>
+        <button type="submit" form="form" class="btn btn-primary btn-add">添加</button>
       </div>
 
     </div>
   </div>
 </div>
+
+
 <!--二级分类数据模板-->
 <script type='text/template' id=menuTpl>
   {{each rows v i}}
@@ -155,11 +153,10 @@
     <td>{{(page-1)*size+i+1}}</td>
     <td>{{v.categoryName}}</td>
     <td>{{v.brandName}}</td>
-    <td data-id={{v.id}}><img width='50' height='50' src="{{v.brandLogo}}" alt=""></td>
+    <td data-id={{v.id}}><img  height='50' src="{{v.brandLogo}}" alt=""></td>
   </tr>
   {{/each}}
 </script>
-
 <!--下拉框数据模板-->
 <script type='text/template' id='cellTpl'>
   {{each rows v i}}
