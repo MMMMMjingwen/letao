@@ -4,36 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘商城-分类页</title>
+  <title>乐淘商城-搜索页</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/search.css">
 </head>
 <body>
 <div class="container">
 
   <div class="lt-header">
     <a href="javascript:history.go(-1);" class='home'><span class='mui-icon mui-icon-back'></span></a>
-    <h5 class='title' >登陆</h5>
+    <h5 class='title' >乐淘云购</h5>
+    <a href="#" class='search'><span class='fa fa-search'></span></a>
   </div>
 
   <div class="lt-main">
-    <form class="mui-input-group">
-      <div class="mui-input-row">
-        <label>用户名</label>
-        <input type="text" name='username' class="mui-input-clear" placeholder="请输入用户名">
-      </div>
-      <div class="mui-input-row">
-        <label>密码</label>
-        <input type="password" name='password'class="mui-input-password" placeholder="请输入密码">
-      </div>
-      <div class="mui-button-row">
-        <button type="button"  class="mui-btn mui-btn-primary btn-land">登陆</button>
-        <button type="reset" class="mui-btn mui-btn-danger">重置</button>
-      </div>
-    </form>
-    <a href="register.html" class='mui-pull-right'>免费注册</a>
+     <form class="myform">
+       <div class="mui-input-row">
+         <input type="text"  class="mui-input-clear" placeholder="请输入搜索关键字">
+         <button class='mui-btn mui-btn-primary btn-search'>搜索</button>
+       </div>
+
+
+     <!--搜索历史-->
+       <span class='mui-pull-left'>搜索历史</span>
+       <span class='mui-pull-right'>清空历史</span>
+       <span class='fa fa-trash btn-empty mui-pull-right'></span>
+       <div class="mui-input-row">
+         <input type="text" class="mui-input-clear histroy">
+       </div>
+     </form>
   </div>
 
   <div class="lt-footer">
@@ -41,7 +43,7 @@
       <li><a href="index.html"><span class='fa fa-home '></span><p>首页</p></a></li>
       <li><a href="categroy.html"><span class='fa fa-bars '></span><p >分类</p></a></li>
       <li><a href="#"><span class='fa fa-shopping-cart'></span><p>购物车</p></a></li>
-      <li><a href="user.html"><span class='fa fa-user now'></span><p class='now'>会员中心</p></a></li>
+      <li><a href="login.html"><span class='fa fa-user'></span><p>会员中心</p></a></li>
     </ul>
   </div>
 </div>

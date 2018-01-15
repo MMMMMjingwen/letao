@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.myform {
+  padding: 10px;
+
+}
+.myform input{
+  border: 1px solid #007aff;
+}
+
+.btn-search{
+  position: absolute;
+  top:0px;
+  right: 0px;
+}
+.mui-input-row .mui-btn{
+  padding: 11px 17px;
+}
+.myform .histroy{
+  border: 1px dashed red;
+}
