@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.cate-l{
+  float: left;
+  position: relative;
+  height: 100%;
+  width: 80px;
+}
+
+.cate-l li{
+  background-color: palegreen;
+  border-bottom: 1px solid red;
+  border-right:1px solid red ;
+  height: 50px;
+  width: 100%;
+}
+
+a{
+  display: block;
+   text-align: center;
+  line-height: 45px;
+  color: blue;
+}
+.cate-r{
+  background-color: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.cate-r .brand{
+  position: absolute;
+  top:0
+}
+
+.cate-r .brand li{
+  float: left;
+  margin-left: 10px;
+  width: 28%;
+
+}
+.cate-r .brand img{
+  height: 100%;
+  width: 100%;
+}
+.cate-r p{
+  text-align: center;
+}
