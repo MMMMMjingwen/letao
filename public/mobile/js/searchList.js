@@ -1,7 +1,4 @@
-/**
- * Created by HUCC on 2017/11/25.
- */
-/*
+
  $(function () {
 
  var currentPage = 1;
@@ -106,7 +103,7 @@
 
 
 
- });*/
+ });
 
 
 $(function () {

@@ -83,3 +83,60 @@ position: relative;
 .lt-footer li .now{
   color:darkorange
 }
+/*搜索框*/
+.lt_serach {
+  padding: 10px;
+  position: relative;
+}
+.lt_serach input{
+  height: 34px;
+  font-size: 14px;
+  border-radius:5px ;
+  margin-bottom: 0px;
+}
+.lt_serach .btn-search{
+  position: absolute;
+  top: 11px;
+  right:11px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+/*导航购物*/
+.lt-shopping{
+  padding: 10px;
+}
+.lt-shopping a{
+  display: block;
+}
+.lt-shopping li{
+  width: 48%;
+  border: 1px solid #ccc;
+  float: left;
+}
+.lt-shopping li:nth-child(even){
+  margin-left: 16px;
+}
+.lt-shopping li img{
+  height: 100%;
+  width: 100%;
+}
+.lt-shopping li p{
+  padding: 5px;
+}
+.lt-shopping li{
+  margin-bottom: 10px;
+}
+.lt-shopping li .price{
+  text-align: center;
+}
+.lt-shopping li span:nth-child(1){
+  color: red;
+}
+.lt-shopping li span:nth-child(2){
+  color: #ccc;
+  text-decoration: line-through;
+}
+.lt-shopping li button{
+  margin-left: 28%;
+  margin-bottom: 3px;
+}

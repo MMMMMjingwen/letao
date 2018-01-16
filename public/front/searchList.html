@@ -4,46 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘商城-搜索页</title>
+  <title>乐淘商城-商品列表</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/searchList.css">
 </head>
 <body>
 <div class="container">
-  
+
   <div class="lt-header">
     <a href="javascript:history.go(-1);" class='home'><span class='mui-icon mui-icon-back'></span></a>
-    <h5 class='title'>乐淘云购</h5>
-    <a href="#" class='search'><span class='fa fa-search'></span></a>
+    <h4 class='title'>商品列表</h4>
   </div>
-  
+
   <div class="lt-main">
     <div class="mui-scroll-wrapper">
-      <div class="mui-scroll">
+      <div class="mui-scroll product">
+
         <div class="lt_serach">
-          <input type="text" class='search-txt' name='search-txt'  placeholder='请输入关键字'>
+          <input type="text" class='search-txt'  placeholder='请输入关键字'>
           <button class='mui-btn mui-btn-primary btn-search'>搜索</button>
         </div>
-        
-        <div class="lt_histroy">
-          <div class="lt_title mui-clearfix">
-            <span class='mui-pull-left'>搜索历史</span>
-            <span class='mui-pull-right fa fa-trash '>清除记录</span>
+   <!--筛选-->
+          <div class="proList">
+            <a href="#">上架时间<span class='fa fa-angle-down'></span></a>
+            <a data-type='price' class='now' href="#">价格<span class='fa fa-angle-down'></span></a>
+            <a data-type='num'  href="#">库存<span class='fa fa-angle-down'></span></a>
+            <a href="#">折扣<span class='fa fa-angle-down'></span></a>
           </div>
-          <div class="lt_content">
-            <ul>
-              <!--<li class='mui-clearfix'>-->
-                <!--<span class='mui-pull-left'>阿迪达斯</span>-->
-                <!--<span class='mui-icon mui-icon-closeempty mui-pull-right'></span>-->
-              <!--</li>-->
+        <!--导航购物-->
+        <ul class='lt-shopping'>
+          <!--<li>-->
+            <!--<a href="#">-->
+              <!--<img src="./images/product.jpg" alt="">-->
+              <!--<p class='mui-ellipsis-2'>333</p>-->
+              <!--<div class='price'>-->
+                <!--<span>￥111</span>-->
+                <!--<span>￥222</span>-->
+              <!--</div>-->
+              <!--<button class=' mui-btn mui-btn-blue'>立即购买</button>-->
+            <!--</a>-->
+          <!--</li>-->
+        </ul>
 
-            </ul>
-          </div>
-        </div>
-      
       </div>
     </div>
   </div>
@@ -64,30 +69,23 @@
 </body>
 </html>
 <script type='text/template' id='listTpl'>
-  {{if arr.length==0}}
-  <p>没有历史记录</p>
-  {{/if}}
-
-  {{if arr.length > 0}}
-  <div class="lt_title mui-clearfix">
-    <span class='mui-pull-left'>搜索历史</span>
-    <span class='mui-pull-right fa fa-trash btn-del'>清除记录</span>
-  </div>
-  {{/if}}
-  <div class="lt_content">
-    <ul>
-      {{each arr v i}}
-      <li class='mui-clearfix'>
-        <span>{{v}}</span>
-        <span data-index={{i}} class='mui-icon mui-icon-closeempty mui-pull-right btn-smdels'></span>
-      </li>
-    {{/each}}
-    </ul>
-  </div>
+  {{each data v i}}
+  <li>
+    <a href="product.html">
+      <img src="{{v.pic[0].picAddr}}" alt="">
+      <p class='mui-ellipsis-2'>{{v.proDesc}}</p>
+      <div class='price'>
+        <span>￥{{v.oldPrice}}</span>
+        <span>￥{{v.price}}</span>
+      </div>
+      <button class=' mui-btn mui-btn-blue'>立即购买</button>
+    </a>
+  </li>
+  {{/each}}
 </script>
 <script src='lib/zepto/zepto.min.js'></script>
 <script src='lib/mui/js/mui.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
 <script src='js/common.js'></script>
 <script src='js/login.js'></script>
-<script src='js/search.js'></script>
+<script src='js/searchList.js'></script>

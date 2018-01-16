@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.proList{
+  height: 30px;
+  line-height: 30px;
+  background-color: #eee;
+}
+.proList a{
+  font-size: 14px;
+  float: left;
+  text-align: center;
+  width: 25%;
+  color: #666;
+}
+.proList a.now{
+  color:darkorange;
+}
