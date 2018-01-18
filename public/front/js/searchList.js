@@ -2,8 +2,11 @@
  * Created by 马靖文 on 2018/1/16.
  */
 $(function(){
+
   var key=tools.getSearch("key");
   $('.search-txt').val(key)
+
+
   //渲染页面
   function render(){
     var param={};
@@ -22,11 +25,17 @@ $(function(){
       data:param,
       success:function(info){
         console.log(info);
-       $('.lt-shopping').html(template('listTpl',info))
+        setTimeout(function(){
+          $('.lt-shopping').html(template('listTpl',info))
+        },1000)
+        //$('.wait').hide();
+
       }
 
     })
+
   }
+  render()
   //点击搜索按钮渲染页面
   $('.btn-search').on('click',function(){
      $('.search-txt').val();
@@ -52,5 +61,4 @@ $(function(){
 
 
 
-  //
 });

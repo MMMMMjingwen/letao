@@ -22,7 +22,7 @@
   <div class="lt-main">
     <div class="mui-scroll-wrapper">
       <div class="mui-scroll product">
-
+    <!--搜索框-->
         <div class="lt_serach">
           <input type="text" class='search-txt'  placeholder='请输入关键字'>
           <button class='mui-btn mui-btn-primary btn-search'>搜索</button>
@@ -36,6 +36,8 @@
           </div>
         <!--导航购物-->
         <ul class='lt-shopping'>
+          <!--缓冲-->
+          <div class='wait'></div>
           <!--<li>-->
             <!--<a href="#">-->
               <!--<img src="./images/product.jpg" alt="">-->
@@ -59,7 +61,7 @@
         <p>首页</p></a></li>
       <li><a href="categroy.html"><span class='fa fa-bars '></span>
         <p>分类</p></a></li>
-      <li><a href="#"><span class='fa fa-shopping-cart'></span>
+      <li><a href="cart.html"><span class='fa fa-shopping-cart'></span>
         <p>购物车</p></a></li>
       <li><a href="login.html"><span class='fa fa-user'></span>
         <p>会员中心</p></a></li>
@@ -71,7 +73,7 @@
 <script type='text/template' id='listTpl'>
   {{each data v i}}
   <li>
-    <a href="product.html">
+    <a href="product.html?productid={{v.id}}">
       <img src="{{v.pic[0].picAddr}}" alt="">
       <p class='mui-ellipsis-2'>{{v.proDesc}}</p>
       <div class='price'>

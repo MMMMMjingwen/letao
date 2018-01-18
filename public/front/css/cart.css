@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.cart-box{
+  position: relative;
+}
+.cart-box li{
+  /*padding: 5px;*/
+  /*border-bottom: 1px solid #ccc;*/
+}
+.cart-img{
+  height: 60px;
+  width: 60px;
+  float: left;
+ margin-top: 10px;
+}
+.caet-info{
+  margin-left: 70px;
+  overflow: hidden;
+}
+.caet-info span:nth-child(3){
+  margin-left: 250px;
+}
+.caet-info .proName{
+  font-size: 15px;
+  color: #000;
+}
+.price{
+  color: red;
+}
+.oldPrice{
+  margin-left: 3px;
+  text-decoration: line-through;
+}
+.ck{
+  position: absolute;
+  bottom:-5px;
+  left: 4px;
+}
+.list{
+  border-top: 1px solid #ccc;
+  height:33px;
+
+}
+.total{
+  padding: 5px;
+
+}
+.list a{
+  color: red;
+  font-size: 11px;
+}
+.list button{
+  background-color: red;
+  border-radius: 0px;
+}
+.container{
+  padding-bottom: 88px;
+}
+.chima span{
+  border: 1px solid #ccc;
+}
+.chima .now{
+   background-color: blue;
+}

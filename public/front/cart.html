@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>乐淘商城-购物车</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="lt-header">
+    <a href="javascript:history.go(-1);" class='home'><span class='mui-icon mui-icon-back'></span></a>
+    <h5 class='title'>购物车</h5>
+  </div>
+
+  <div class="lt-main">
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+
+        <ul class="mui-table-view mui-table-view-chevron cart-box">
+          <!--000000000000000-->
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+   <div class="list">
+     <div class="total mui-pull-left">
+     <a  href="javascript:;">订单总金额&yen;<span  class='tot'>00.00</span></a>
+     </div>
+     <button class='mui-btn mui-btn-red mui-pull-right'>生成订单</button>
+   </div>
+
+   <div class="lt-footer">
+    <ul class='mui-clearfix'>
+      <li><a href="index.html"><span class='fa fa-home '></span>
+        <p>首页</p></a></li>
+      <li><a href="categroy.html"><span class='fa fa-bars '></span>
+        <p>分类</p></a></li>
+      <li><a href="cart.html"><span class='fa fa-shopping-cart now'></span>
+        <p class='now'>购物车</p></a></li>
+      <li><a href="user.html"><span class='fa fa-user '></span>
+        <p >会员中心</p></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
+<script type='text/template' id='Tpl'>
+  {{each list v i}}
+  <li class="mui-table-view-cell mui-transitioning mui-selected ">
+    <div class="mui-slider-right mui-disabled mui-selected">
+      <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose btn-edit"
+         data-productSize={{v.productSize}}
+         data-num={{v.num}}
+         data-size={{v.size}}
+         data-id={{v.id}}
+
+      ></a>
+      <a class="mui-btn mui-btn-red mui-icon mui-icon-trash  btn-del"
+
+
+      <% if(v.pic.length > 0){  %>
+
+         data-pic={{v.pic[0].picAddr}}
+       <% } %>
+         data-id={{v.id}}
+         data-proName={{v.proName}}
+         data-price={{v.price}}
+         data-oldPrice={{v.oldPrice}}
+         data-num={{v.num}}
+      ></a>
+
+    </div>
+    <div class="mui-slider-handle" >
+      <div class="mui-table-cell">
+        <!--菜单内容-->
+        <input type="checkbox" class='ck'>
+        <%
+        if(v.pic.length>0){
+        %>
+        <div class="cart-img">
+          <img src="{{v.pic[0].picAddr}}" alt="" width='60' height='60'>
+          <%
+          }
+          %>
+          <%
+          if(v.pic.length=0){
+          %>
+          <div class="cart-img">
+            <img src="./images/none.png" alt="" width='60' height='60'>
+            <%
+            }
+            %>
+
+        </div>
+        <div class="caet-info ">
+          <p class='proName'>{{v.proName}}</p>
+          <p>
+            <span class='price'>&yen;{{v.price}}</span>
+            <span class='oldPrice'>&yen;{{v.oldPrice}}</span>
+            <span class='num mui-pull-right'>{{v.num}}双</span>
+          </p>
+          <p class='size'>鞋码:{{v.size}}</p>
+        </div>
+        <!--菜单内容end-->
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+<script type='text/template' id='tpl2'>
+  <div  class="chima padd10">
+
+    <%
+    var temp = productsize.split("-");
+    for(var i = temp[0]; i <= temp[1]; i++){
+    %>
+    <span  class="{{i==size?'now':''}}">{{i}}</span>
+    <% } %>
+  </div>
+
+  <div class="lt_num">
+    数量：
+    <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+      <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+      <input class="mui-numbox-input" type="number" value="1" />
+      <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+    </div>
+  </div>
+</script>
+
+<script src='lib/zepto/zepto.min.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='js/common.js'></script>
+<script src='js/login.js'></script>
+<script src='js/cart.js'></script>

@@ -5,8 +5,8 @@ const mysql = require('mysql');
 const pool  = mysql.createPool({
     host : '127.0.0.1',
     user : 'root',
-    password : '',
-    database : 'letao'
+    password : 'root',//password必须是你的数据库密码，找到你阿里百秀，
+    database : 'letao1'
 });
 
 /**

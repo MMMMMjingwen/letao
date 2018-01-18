@@ -14,3 +14,20 @@
 .proList a.now{
   color:darkorange;
 }
+.wait{
+  height: 50px;
+  width: 50px;
+  border: 2px solid blue;
+  margin: 50px auto;
+  transform: translateX(-50%);
+  animation: play 1s ease-in-out  infinite;
+}
+
+@keyframes play {
+  from{
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to{
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

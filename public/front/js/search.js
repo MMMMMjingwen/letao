@@ -83,4 +83,9 @@ $('.lt_histroy').on('click','.btn-smdels',function(){
       location.href='searchList.html?key='+searchVal
    })
 
+
+
+  //点击历史记录中的文字页面跳转
+
+
 });

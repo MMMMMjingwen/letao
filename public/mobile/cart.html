@@ -92,7 +92,11 @@
               data-num="{{v.num}}"
         >
         <div class="mui-pull-left img_box">
+          <%
+          if(v.pic.length>0){
+          %>
           <img src="{{v.pic[0].picAddr}}" alt="">
+          <%}%>
         </div>
 
         <div class="info_box">
